@@ -1,0 +1,23 @@
+name: depends
+on:
+  push: [main]
+
+jobs:
+  ubuntu:
+   runs-on: ubuntu-latest
+   steps:
+     - run: echo "hello"
+  windows:
+    runs-on: windows-latest
+    steps:
+      - run: echo "win"
+  mac:
+    runs-on: macos-latest
+    steps:
+      - run: echo "mac"
+  final:
+    runs-on: ubuntu-latest
+    needs: [ubuntu,windows, mac]
+    steps:
+       - run: echo "last"
+
