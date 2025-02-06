@@ -29,5 +29,6 @@ jobs:
           touch tomcat-configs.xml
           cp tomcat-configs.xml tomcat/
           ls -ltr
+          ls tomcat/
           java --version
         
