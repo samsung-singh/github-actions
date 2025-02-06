@@ -1,6 +1,8 @@
 name: depends
 on:
-  push: [main]
+  push:
+    branches:
+      - main
 
 jobs:
   ubuntu:
