@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: apache/tomcat
-          ref: master
+          ref: main
           path: ./tomcat
       - name: install java 
         uses: actions/setup-java@v1
