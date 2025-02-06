@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v2
-        run: |
+      - run: |
           ls -ltr
           java --version
 
