@@ -1,0 +1,25 @@
+name: Environment Variables
+
+env:
+  Workflow_variable: 'workflow_var'
+  Over_this_ride: 'workflow override'
+
+on: push
+
+jobs:
+  ubuntu:
+    env:
+      job_variable: 'job_var'
+      Over_this_ride: 'job override'
+    runs-on: ubuntu-latest
+    steps:
+      env:
+        steps_var: 'steps var'
+        Over_this_ride: 'steps override'
+      - run: |
+          echo " ${{ env.Workflow_variable }}"
+          echo " ${{ env.job_variable }}"
+          echo " ${{ env.steps_var }}"
+          echo " ${{ env.Over_this_ride }}"
+
+
