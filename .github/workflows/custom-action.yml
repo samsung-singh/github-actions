@@ -1,0 +1,8 @@
+name: custom action
+on: push
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: samsung-singh/my-action@main
